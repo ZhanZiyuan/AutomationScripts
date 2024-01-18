@@ -3,6 +3,9 @@
 # Please refer to:
 # https://xstarcd.github.io/wiki/shell/shell_special_variables.html
 # https://developer.aliyun.com/article/530776
+# 
+# Examples of usage:
+# ./kill_by_pid.sh 66862 71989 57640
 
 # Check if at least one parameter is passed
 if [ "$#" -eq 0 ]; then
@@ -33,5 +36,4 @@ if [ ${#terminated_pids[@]} -eq 0 ]; then
 else
     printf "Process(es) of PID(s): ${terminated_pids[*]} killed.\n"
 fi
-
 
