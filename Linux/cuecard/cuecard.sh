@@ -36,7 +36,7 @@ search_results=$(grep -r "$1" "$HOME/cuecard/linux_commands.md")
 
 # Check if there are any matches
 if [ -z "$search_results" ]; then
-    printf "No matches found for "$1". \n"
+    printf "No matches found for \""$1"\". \n"
 else
     echo "$search_results"
 fi
