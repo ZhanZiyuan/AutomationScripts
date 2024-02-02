@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# Run all Python scripts in the specified directory recursively.
+#
+# Examples of usage:
+# ./run_python_in_dir.sh /home/zhanziyuan/private_archive/kinopt_0.6/kinopt
+
 # Check if at least one parameter is passed
 if [ "$#" -eq 0 ]; then
     printf "Usage: $0 <directory> \n"
