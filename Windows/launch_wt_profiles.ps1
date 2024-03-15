@@ -15,13 +15,13 @@ wt.exe `
         --tabColor "#437aa8" `; `
     new-tab `
         --profile group_name `
-        --title "(base) 3.8" `
+        --title "(base) 3.8" --suppressApplicationTitle `
         --tabColor "#b7177d" `; `
     new-tab `
         --profile group_name `
-        --title "(base) 3.11" `
+        --title "(base) 3.11" --suppressApplicationTitle `
         --tabColor "#6455be" `; `
     new-tab `
         --profile group_name `
-        --title "top - 3.10" `
+        --title "top - 3.10" --suppressApplicationTitle `
         --tabColor "#8a2be2" `; `
