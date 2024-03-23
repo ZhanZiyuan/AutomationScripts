@@ -11,6 +11,11 @@
 
 
 function show_help() {
+    echo
+    echo "Periodically check the processes of a specified user, "
+    echo "and if the memory usage exceeds the threshold, "
+    echo "terminate the process with the largest memory consumption."
+    echo
     echo "Usage: $0 [options]"
     echo "Options:"
     echo "  -t, --time      Set the sleep time in seconds (default: 120)."
@@ -18,13 +23,15 @@ function show_help() {
     echo "  -m, --memory    Set the memory limit in GB (default: 40)."
     echo "  -h, --help      Display this help message and exit."
     echo "  -v, --version   Display version information."
+    echo
 }
 
 function show_version() {
-    local version="0.2"
+    local version="0.4"
     local modification_time=$(stat -c %y "$0" | awk -F. '{print $1}')
-    echo -e "$(basename "$0" .sh) $version \t\c"
+    echo "$(basename "$0" .sh) $version"
     echo "Last modified on: $modification_time"
+    echo
 }
 
 function check_memory_usage() {
