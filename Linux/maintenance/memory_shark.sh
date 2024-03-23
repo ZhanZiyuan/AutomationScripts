@@ -17,6 +17,14 @@ function show_help() {
     echo "  -u, --user      Set the username to monitor (default: zhanziyuan)."
     echo "  -m, --memory    Set the memory limit in GB (default: 40)."
     echo "  -h, --help      Display this help message and exit."
+    echo "  -v, --version   Display version information."
+}
+
+function show_version() {
+    local version="0.2"
+    local modification_time=$(stat -c %y "$0" | awk -F. '{print $1}')
+    echo -e "$(basename "$0" .sh) $version \t\c"
+    echo "Last modified on: $modification_time"
 }
 
 function check_memory_usage() {
@@ -60,6 +68,7 @@ while [[ "$#" -gt 0 ]]; do
         -u|--user) username="$2"; shift ;;
         -m|--memory) mem_limit="$2"; shift ;;
         -h|--help) show_help; exit 0 ;;
+        -v|--version) show_version; exit 0 ;;
         *) echo "Unknown parameter passed: $1"; show_help; exit 1 ;;
     esac
     shift
