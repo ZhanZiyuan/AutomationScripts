@@ -12,6 +12,7 @@
 if ($PSVersionTable.PSVersion.Major -ge 5) {
     Import-Module PoshColor
     Import-Module PowerShellAI
+    Import-Module PSReadLine
     Import-Module Terminal-Icons
 }
 else {
