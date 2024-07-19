@@ -1,6 +1,3 @@
-# https://copilot.microsoft.com/sl/glK96zHMjDw
-
-
 function Copy-SpecificFiles {
     param (
         [string]$source,
