@@ -4,17 +4,17 @@
 VERSION="2.0.0"
 
 # Define help information
-HELP="WARNING: the cp command will overwrite the existing file with the same name.
+HELP="WARNING: The cp command will overwrite the existing file with the same name.
 
-Usage: $0 [OPTIONS] SOURCE_DIR TARGET_DIR EXTENSIONS...
+Usage: $0 [OPTIONS] SOURCE_DIR TARGET_DIR EXTENSIONS
 
 Options:
-    -h, --help      Display help information
-    -v, --version   Display version information
+    -h, --help      Display help information.
+    -v, --version   Display version information.
 
 Arguments:
-    SOURCE_DIR      Path to be copied
-    TARGET_DIR      Target path
+    SOURCE_DIR      Path to be copied.
+    TARGET_DIR      Target path.
     EXTENSIONS      File extensions, e.g., .py, .ipynb, .yaml
 
 Example:
@@ -30,7 +30,7 @@ copy_specific_files() {
     # If the target path does not exist, create it
     mkdir -p "$target_dir"
 
-    echo "Starting to copy files from $source_dir..."
+    echo "Starting to copy files from: $source_dir"
 
     # Iterate over the extensions and copy files
     for ext in "${extensions[@]}"; do
@@ -47,7 +47,7 @@ copy_specific_files() {
         done
     done
 
-    echo "Finished copying files to $target_dir"
+    echo "Finished copying files to: $target_dir"
 }
 
 # Check parameters
