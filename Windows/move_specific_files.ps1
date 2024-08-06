@@ -9,7 +9,7 @@ function Copy-SpecificFiles {
         $dest = $destination + $_.FullName.Substring($source.length)
         $destDir = [System.IO.Path]::GetDirectoryName($dest)
         New-Item -ItemType Directory -Force -Path $destDir
-        Copy-Item -Path $_.FullName -Destination $dest
+        Move-Item -Path $_.FullName -Destination $dest
     }
 }
 
