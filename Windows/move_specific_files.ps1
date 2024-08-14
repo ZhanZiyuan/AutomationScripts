@@ -1,3 +1,7 @@
+# Example:
+# .\move_specific_files.ps1 "D:\zigzag\Python Assignments\received" "C:\Users\user\Downloads" py ipynb
+
+
 function Copy-SpecificFiles {
     param (
         [string]$source,
@@ -16,7 +20,7 @@ function Copy-SpecificFiles {
 # Check the number of arguments
 if ($args.Count -lt 3) {
     $script_name = Split-Path $PSCommandPath -Leaf
-    Write-Output "Error: insufficient parameters."
+    Write-Output "Error: Insufficient parameters."
     Write-Output "Usage: $script_name <source> <destination> <filetype 1> [<filetype 2> ...]"
     exit 1
 }
